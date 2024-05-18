@@ -1,0 +1,7 @@
+<footer class="info">
+  <p class="info__left" *ngIf="size === 0">Try add something!</p>
+  <p class="info__left" *ngIf="size > 0">{{ size }} items left</p>
+  <button class="info__clear" (click)="tasksService.clearChecked()">
+    clear completed
+  </button>
+</footer>

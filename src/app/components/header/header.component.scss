@@ -1,0 +1,16 @@
+@use "../../../settings/colors.settings.scss" as *;
+
+.header {
+  display: flex;
+
+  align-items: center;
+
+  padding-top: 25px;
+  height: 100px;
+
+  &__title {
+    font-size: 1.51rem;
+    color: #ffffff;
+    letter-spacing: 10px;
+  }
+}

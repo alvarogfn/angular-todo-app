@@ -1,0 +1,13 @@
+<ul class="tasks">
+  <li class="tasks__item" *ngFor="let task of tasks; let id = index">
+    <app-task
+      class="tasks__task"
+      (changedTask)="onChangedTask($event)"
+      [task]="task"
+      [taskId]="id"
+    ></app-task>
+  </li>
+  <li class="tasks__item">
+    <app-task-info class="tasks__info"></app-task-info>
+  </li>
+</ul>

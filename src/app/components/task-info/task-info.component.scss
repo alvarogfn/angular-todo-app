@@ -1,0 +1,34 @@
+@use "../../../settings/colors.settings.scss" as *;
+
+.info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+
+  font-size: 0.7rem;
+
+  &__left {
+    font-size: inherit;
+  }
+
+  &__clear {
+    color: $Dark-Grayish-Blue;
+    font-size: inherit;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    padding: 5px;
+
+    text-transform: capitalize;
+
+    transition: 200ms;
+
+    &:active,
+    &:hover {
+      color: $Light-Grayish-Blue-hover;
+    }
+  }
+}

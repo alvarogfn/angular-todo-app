@@ -1,0 +1,32 @@
+@use "../../../settings/colors.settings.scss" as *;
+
+.controller {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: 15px;
+  column-gap: 20px;
+
+  &__button {
+    color: $Very-Dark-Grayish-Blue-1;
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    transition: 200ms;
+
+    &:hover {
+      color: $Light-Grayish-Blue;
+      cursor: pointer;
+    }
+
+    &--active {
+      color: $Bright-Blue;
+
+      transition: 0;
+
+      &:hover {
+        color: $Bright-Blue;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<div class="controller">
+  <button
+    (click)="changeTab('All')"
+    class="controller__button"
+    [class.controller__button--active]="active === 'All'"
+  >
+    All
+  </button>
+  <button
+    (click)="changeTab('Active')"
+    [class.controller__button--active]="active === 'Active'"
+    class="controller__button"
+  >
+    Active
+  </button>
+  <button
+    (click)="changeTab('Completed')"
+    [class.controller__button--active]="active === 'Completed'"
+    class="controller__button"
+  >
+    Completed
+  </button>
+</div>

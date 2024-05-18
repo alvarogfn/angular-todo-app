@@ -1,0 +1,36 @@
+<form
+  (submit)="taskId === null ? submitTask($event) : onChangeTask()"
+  class="task"
+  method="get"
+>
+  <label class="task__checkin">
+    <input
+      (ngModelChange)="onChangeChecked($event)"
+      [checked]="true"
+      [disabled]="taskId === null"
+      [ngModel]="checked"
+      class="task__check"
+      name="checked"
+      type="checkbox"
+    />
+  </label>
+  <input
+    (blur)="onChangeTask()"
+    (ngModelChange)="onChangeDescription($event)"
+    [class.task__input--checked]="checked"
+    [ngModel]="description"
+    [placeholder]="taskId === null ? 'Create a new todo...' : ''"
+    class="task__input"
+    name="description"
+    required
+    type="text"
+  />
+  <button
+    (click)="deleteTask(taskId)"
+    *ngIf="taskId !== null"
+    class="task__delete"
+    type="reset"
+  >
+    <img alt="delete" height="18" ngSrc="assets/icon-cross.svg" width="18"/>
+  </button>
+</form>

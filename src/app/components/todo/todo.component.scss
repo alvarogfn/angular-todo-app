@@ -1,0 +1,44 @@
+@use "../../../settings/colors.settings.scss" as *;
+.todo {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 20px;
+
+  &__new,
+  &__list,
+  &__controller {
+    color: $Dark-Grayish-Blue;
+    background-color: $Very-Dark-Desaturated-Blue;
+    border-radius: 5px;
+
+    animation-name: appear;
+    animation-fill-mode: forwards;
+    animation-duration: 200ms;
+
+    opacity: 0;
+  }
+
+  &__new {
+    animation-delay: 0ms;
+  }
+
+  &__list {
+    animation-delay: 200ms;
+  }
+
+  &__controller {
+    animation-delay: 400ms;
+  }
+}
+
+@keyframes appear {
+  from {
+    transform: translateX(100px) scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0px) scale(1);
+    opacity: 1;
+  }
+}
